@@ -24,7 +24,8 @@
     "noImplicitAny": true,
     "baseUrl": ".",
     "paths": {
-      "@routes/*": ["./src/routes/*"],
+      "@router/*": ["./src/router/*"],
+      "@controllers/*": ["./src/controllers/*"],
     },
 
   },
