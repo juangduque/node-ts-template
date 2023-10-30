@@ -21,6 +21,7 @@
     "outDir": "dist", 
     "strict": true,          
     "strictNullChecks": true,
+    "noImplicitAny": true,
     "baseUrl": ".",
     "paths": {
       "@routes/*": ["./src/routes/*"],
