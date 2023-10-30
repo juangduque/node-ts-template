@@ -1,12 +1,13 @@
-import express from "express";
+import express, { type Request } from 'express';
 
 const PORT = 3000;
 const app = express();
 
-app.get("/", (req, res) => {
-  res.json({ message:"Hello World" });
+app.get('/', (req: Request, res) => {
+	res.json({ message: 'Hello World!' });
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+	// eslint-disable-next-line no-console
+	console.log(`Server is running on http://localhost:${PORT}`);
 });
