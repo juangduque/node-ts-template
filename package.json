@@ -4,11 +4,11 @@
   "description": "Transactional Management System of services for POS",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && tsc-alias",
     "start": "node dist/index.js",
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --ignore-watch node_modules ./src/index.ts",
     "lint": "eslint --ext .js,.ts .",
-    "lint-fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
+    "lint-fix": "eslint --fix src/**/*.ts"
   },
   "engines": {
     "node": "18"
@@ -36,6 +36,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "prettier": "^3.0.3",
     "ts-node-dev": "^2.0.0",
+    "tsc-alias": "^1.8.8",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.2.2"
   }
