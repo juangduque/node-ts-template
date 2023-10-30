@@ -1,0 +1,12 @@
+{
+  "name": "transactional-management-system",
+  "version": "1.0.0",
+  "description": "Transactional Management System of services for POS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["POS", "Services", "Transactions"],
+  "author": "Juan Duque",
+  "license": "ISC"
+}
