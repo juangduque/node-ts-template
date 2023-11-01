@@ -10,7 +10,9 @@
     "test": "mocha -r ts-node/register -r tsconfig-paths/register src/**/*.test.ts --timeout 15000",
     "test:base": "mocha -r ts-node/register -r tsconfig-paths/register --recursive --timeout 15000",
     "lint": "eslint --ext .js,.ts .",
-    "lint-fix": "eslint --fix src/**/*.ts"
+    "lint-fix": "eslint --fix src/**/*.ts",
+    "docker:build": "docker build -t node-app .",
+    "docker:run": "docker run -p 3000:3000 node-app"
   },
   "engines": {
     "node": "18"

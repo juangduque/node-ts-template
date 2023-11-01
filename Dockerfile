@@ -1,9 +1,6 @@
 # Use an official Node.js runtime as a parent image
 FROM node:18-alpine
 
-# Instalar Yarn globalmente
-RUN npm install -g yarn
-
 # Establecer el directorio de trabajo dentro del contenedor
 WORKDIR /usr/src/app
 
@@ -11,10 +8,12 @@ WORKDIR /usr/src/app
 COPY package*.json yarn.lock ./
 
 # Instalar dependencias usando Yarn
-RUN yarn install --production  # Cambiado a --production para instalar solo las dependencias de producción
+RUN yarn install
 
 # Copiar el código fuente al contenedor
 COPY . .
+
+RUN yarn build
 
 # Exponer el puerto
 EXPOSE 3000
