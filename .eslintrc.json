@@ -20,6 +20,11 @@
 		"sourceType": "module",
 		"project": "./tsconfig.json"
 	},
+	"ignorePatterns": [
+		"node_modules/",
+		"dist/",
+		"commitlint.config.js"
+	],
 	"rules": {
 		"prettier/prettier": ["error",{
 			"endOfLine": "auto",
