@@ -7,7 +7,7 @@ app.use(express.json());
 
 routerApi(app);
 
-app.get('/', (req: Request, res: Response) => {
+app.get('/hello', (req: Request, res: Response) => {
 	res.json({ message: 'Hello World!' });
 });
 

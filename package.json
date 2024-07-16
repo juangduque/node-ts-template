@@ -1,7 +1,7 @@
 {
-  "name": "set-a-title",
-  "version": "1.0.0",
-  "description": "Set a description",
+  "name": "nebula-be",
+  "version": "0.1.0",
+  "description": "Backend app to manage Nebula's fintech services",
   "main": "index.js",
   "scripts": {
     "build": "tsc && tsc-alias",
@@ -11,7 +11,7 @@
     "test:base": "mocha -r ts-node/register -r tsconfig-paths/register --recursive --timeout 15000",
     "commit": "npx git-cz",
     "lint": "eslint --ext .js,.ts .",
-    "lint-fix": "eslint --fix src/**/*.ts",
+    "lint:fix": "eslint --fix src/**/*.ts",
     "docker:build": "docker build -t node-app .",
     "docker:run": "docker run -p 3000:3000 node-app"
   },
@@ -50,8 +50,8 @@
     "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-promise": "^6.0.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.0.2",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
     "mocha": "^10.2.0",
     "prettier": "^3.0.3",
     "sinon": "^17.0.0",
@@ -66,5 +66,10 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "lint-staged": {
+    "**/*.{js,ts}": [
+      "yarn lint:fix"
+    ]
   }
 }
