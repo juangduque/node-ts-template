@@ -1,7 +1,7 @@
 {
-  "name": "transactional-management-system",
+  "name": "set-a-title",
   "version": "1.0.0",
-  "description": "Transactional Management System of services for POS",
+  "description": "Set a description",
   "main": "index.js",
   "scripts": {
     "build": "tsc && tsc-alias",
@@ -16,7 +16,7 @@
     "docker:run": "docker run -p 3000:3000 node-app"
   },
   "engines": {
-    "node": "18"
+    "node": "20"
   },
   "keywords": [
     "POS",
